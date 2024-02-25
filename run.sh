@@ -33,4 +33,4 @@ mkdir -p ${PKG_DIR}/usr/bin
 curl -L -o ${PKG_DIR}/usr/bin/envoy https://github.com/envoyproxy/envoy/releases/download/v${ENVOY_VERSION}/envoy-${ENVOY_VERSION}-${ENVOY_ARCH}
 
 # create the package
-dpkg-deb --build ${PKG_DIR}
+dpkg-deb --build --root-owner-group ${PKG_DIR}
