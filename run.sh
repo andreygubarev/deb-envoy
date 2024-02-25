@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
+apt-get update
+apt-get install -yq --no-install-recommends \
+  ca-certificates \
+  curl \
+  dpkg-dev \
+  envsubst
+
 export ENVOY_VERSION=1.29.1
 export ENVOY_ARCH=${ENVOY_ARCH:-linux-x86_64}
 
