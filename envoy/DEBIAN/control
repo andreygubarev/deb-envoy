@@ -1,0 +1,7 @@
+Package: ${PKG_NAME}
+Version: ${PKG_VERSION}-${PKG_RELEASE}
+Section: base
+Priority: optional
+Architecture: ${PKG_ARCH}
+Maintainer: Andrey Gubarev <andrey@andreygubarev.com>
+Description: Envoy proxy
