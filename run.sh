@@ -31,6 +31,7 @@ envsubst < envoy/DEBIAN/control > ${PKG_DIR}/DEBIAN/control
 # create the binary
 mkdir -p ${PKG_DIR}/usr/bin
 curl -L -o ${PKG_DIR}/usr/bin/envoy https://github.com/envoyproxy/envoy/releases/download/v${ENVOY_VERSION}/envoy-${ENVOY_VERSION}-${ENVOY_ARCH}
+chmod 0755 ${PKG_DIR}/usr/bin/envoy
 
 # create the package
 dpkg-deb --build --root-owner-group ${PKG_DIR}
