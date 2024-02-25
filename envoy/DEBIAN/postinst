@@ -16,7 +16,6 @@ addenvoyuser() {
           --gecos "envoy user" \
           --shell /bin/false \
           envoy  >/dev/null
-
     fi
 }
 
