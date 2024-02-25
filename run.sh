@@ -5,8 +5,7 @@ apt-get update
 apt-get install -yq --no-install-recommends \
   ca-certificates \
   curl \
-  dpkg-dev \
-  envsubst
+  gettext-base
 
 export ENVOY_VERSION=1.29.1
 export ENVOY_ARCH=${ENVOY_ARCH:-linux-x86_64}
