@@ -22,10 +22,11 @@ case ${ENVOY_ARCH} in
 esac
 
 export PKG_DIR=${PKG_NAME}_${PKG_VERSION}-${PKG_RELEASE}_${PKG_ARCH}
+rm -rf ${PKG_DIR}
 cp -R envoy ${PKG_DIR}
 
 # create the control file
-envsubst < ${PKG_DIR}/DEBIAN/control > ${PKG_DIR}/DEBIAN/control
+envsubst < envoy/DEBIAN/control > ${PKG_DIR}/DEBIAN/control
 
 # create the binary
 mkdir -p ${PKG_DIR}/usr/bin
